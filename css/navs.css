@@ -1,0 +1,137 @@
+.nav-main {
+    position: absolute;
+    top:0;
+    left:0;
+    display: block;
+    width:auto;
+    height: auto;
+}
+.nav-main ul {
+    padding: 0;
+    margin: 0;
+}
+.nav-main ul li {
+    padding: 5px 15px 5px 15px;
+}
+.block-sub  ul li {
+    padding: 0 0 5px 10px;
+}
+.nav-action {
+    position: absolute;
+    top:0;
+    right:0;
+    display: block;
+    width:auto;
+    height: auto;
+
+}
+.nav-main, .nav-action {
+    padding: 20px 10px 10px;
+}
+/* icons on navs */
+nav .icon {
+    width:40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 40px;
+}
+nav a {
+    position: relative;
+    display: block;
+}
+nav .badge {
+    position: absolute;
+    width:auto;
+    height: auto;
+    top: -5px;
+    right:-5px;
+}
+
+.ul-sub, .block-sub {
+    /* display: none; */
+    float: left;
+    width:140px;
+    background:transparent url(../img/bg_sub.png) 0 0 repeat;
+    height: auto;
+    position: absolute;
+    left:0;
+    top:10px;
+    z-index: 5;
+    -webkit-border-top-right-radius:9px;
+    -moz-border-radius-topright:9px;
+    border-top-right-radius:9px;
+    -webkit-border-bottom-right-radius:9px;
+    -moz-border-radius-bottomright:9px;
+    border-bottom-right-radius:9px;
+    padding-bottom: 15px!important;
+}
+.block-sub {
+    width:240px;
+    padding: 15px;
+    font-size: 14px;
+    color:#fff;
+}
+.block-sub,
+.block-sub .block-header,
+.block-sub .block-content,
+.block-sub .block-bottom {
+    display: block;
+}
+.block-sub .block-header {
+    margin-bottom: 15px;
+}
+.block-sub h3 {
+    font-family: "carlsberg_sanslight", Arial, sans-serif;
+    font-weight: bold;
+}
+.block-sub .block-content {
+    min-height: 220px;
+}
+.block-sub .block-bottom {
+    text-align: right;
+}
+.block-sub .block-bottom a {
+    font-weight: bold;
+}
+.block-sub a {
+    color: #fff;
+    display: inline;
+}
+.hidden {
+    visibility: hidden;
+}
+.visible {
+    visibility:visible;
+}
+.ul-sub .btn-block .btn-text {
+    display: block;
+}
+.alerts:after {
+    content:".";
+    display:block;
+    clear:both;
+    visibility:hidden;
+    line-height:0;
+    height:0;
+    font-size:0;
+}
+* html .alerts {
+    height:1px;
+}
+*+html .alerts {
+    min-height:1px;
+}
+.alerts {
+    display:block;
+}
+.alerts {
+    padding: 14px 0 14px 0;
+}
+.alerts .btn-icon,.alerts .btn-icon:first-child {
+    margin:0;
+    padding:1px;
+}
+nav .alerts .badge {
+    top:0;
+    right: 0;
+}

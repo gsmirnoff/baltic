@@ -1,0 +1,157 @@
+/* icons */
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 24px;
+    text-indent:-99000px;
+    vertical-align: middle;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity:0.9;
+    filter:alpha(opacity=90);
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    /* -webkit-transition:background-color 0.1s linear;
+    -moz-transition:background-color 0.1s linear;
+    -o-transition:background-color 0.1s linear;
+    transition:background-color 0.1s linear; */
+}
+.icon:hover  {
+    opacity:1;
+    filter:alpha(opacity=100);
+    background-color: rgba(255,255,255,0.2);
+}
+/* badges */
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 3px 4px;
+    font-size: 10px;
+    line-height: 1em;
+    font-weight: bold;
+    color: #ffffff;
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #df0024;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+.badge:empty {
+    display: none;
+}
+
+/* icon images */
+.icon-maximize {
+    background-image:url(../img/icon_maximize.png);
+}
+.icon-external {
+    background-image:url(../img/icon_external.png);
+    background-position: 80% 50%;
+
+}
+.icon-search {
+     background-image:url(../img/icon_search.png);
+}
+.icon-menu {
+    background-image:url(../img/icon_menu.png);
+}
+.icon-help {
+    background-image:url(../img/icon_help.png);
+}
+.icon-settings {
+    background-image:url(../img/icon_settings.png);
+}
+.icon-presets {
+    background-image:url(../img/icon_presets.png);
+}
+.icon-minimize {
+    background-image:url(../img/icon_minimize.png);
+}
+.icon-calendar {
+    background-image:url(../img/icon_calendar.png);
+}
+.icon-person {
+    background-image:url(../img/icon_person.png);
+}
+.icon-news {
+    background-image:url(../img/icon_news.png);
+}
+.icon-special {
+    background-image:url(../img/icon_special.png);
+}
+.icon-project {
+    background-image:url(../img/icon_project.png);
+}
+.icon-kpi {
+    background-image:url(../img/icon_kpi.png);
+}
+.icon-large {
+      width:60px;
+      height: 55px;
+      line-height: 55px;
+      font-size: 55px;
+ }
+.icon-large.icon-about {
+    background-image:url(../img/icon_large_about.png);
+    width:60px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 55px;
+}
+.icon-large.icon-kpi {
+    background-image:url(../img/icon_large_kpi.png);
+}
+.icon-large.icon-knowledge {
+    background-image:url(../img/icon_large_knowledge.png);
+}
+.icon-large.icon-forum {
+    background-image:url(../img/icon_large_forum.png);
+}
+.icon-large.icon-docs {
+    background-image:url(../img/icon_large_docs.png);
+}
+.icon-widget {
+    background-image:url(../img/icon_widget.png);
+}
+.active .icon-widget {
+    background-image:url(../img/icon_widget_grey.png);
+}
+.icon-close {
+    background-image:url(../img/icon_close.png);
+}
+.icon-arrow-down {
+    background-image:url(../img/icon_arrow_down.png);
+}
+/* icons on panels */
+.pnl .icon:hover {
+    /* background-color: rgba(188,188,188,0.5); */
+}
+.pnl .active > .icon:hover {
+    background-color:transparent;
+}
+.icon-t-l, .pos-t-l {
+    position: absolute;
+    top:4px;
+    left:4px;
+}
+.icon-t-r, .pos-t-r {
+    position: absolute;
+    top:4px;
+    right:4px;
+}
+.pos-b-r {
+    position: absolute;
+    bottom:4px;
+    right:4px;
+
+}
+.pos-b-l {
+    position: absolute;
+    bottom:4px;
+    left:4px;
+}
