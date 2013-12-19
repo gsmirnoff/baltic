@@ -38,5 +38,38 @@ BALTIC.ToolsController = (function(module){
         }
     };
 
+    view.openWindow = function(event){
+        var activePnl = $(event).parents('.pnl');
+        var panels = $('.pos-t-l').not($(event)).parents('.pnl');
+
+        var widthMain = $('.pnl-container').width();
+        var heightMain = $('.pnl-container').height();
+
+        var panelWidth = panels.width();
+        var panelHeight = panels.height();
+
+
+        if($('.pnl').filter(':hidden').length == 0){
+            panels.fadeOut(100, function(){
+                activePnl.animate({
+                    'width':widthMain,
+                    'height':heightMain
+                }, 200);
+
+                $(event).children().removeClass('icon-maximize').addClass('icon-minimize');
+            });
+        }else{
+            activePnl.animate({
+                'width':panelWidth,
+                'height':panelHeight
+            }, 200, function(){
+                panels.fadeIn(100);
+                $(event).children().addClass('icon-maximize').removeClass('icon-minimize');
+            });
+
+        }
+
+    };
+
     return view;
 }(BALTIC));

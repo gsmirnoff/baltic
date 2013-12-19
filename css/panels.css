@@ -342,11 +342,13 @@
     .pnl-container, .carousel, .carousel-items {
         width: 1308px;
         height: 660px;
+        position: relative;
     }
 
     .pnl {
         width: 436px;
         height: 330px;
+        position: relative;
     }
 
     .pnl-content {

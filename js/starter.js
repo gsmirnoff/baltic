@@ -28,6 +28,10 @@ $(document).ready(function(){
         if($('.main-item-nav').find($(event.target)).length == 0){
             BALTIC.ToolsController.hideMenu();
         }
-    })
+    });
+
+    $('.pos-t-l').bind('click', function(event){
+       BALTIC.ToolsController.openWindow(event.currentTarget);
+    });
 });
 
