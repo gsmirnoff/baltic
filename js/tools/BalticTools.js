@@ -84,7 +84,7 @@ BALTIC.ToolsController = (function(module){
         var configRole = RoleConfig.roles[role];
         var wrapCharts = $('.grapholder').parents('.pnl-container').filter(':visible').find('.grapholder');
         $(wrapCharts).find('.grapholder-inner').empty();
-
+        $(wrapCharts).parent().prev().empty();
         for(var i=0; i<configRole.length; i++){
            $(wrapCharts).eq(i).data('configid', configRole[i]);
             $(wrapCharts).eq(i).removeClass('empty-charts-add');
