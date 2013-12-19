@@ -40,17 +40,18 @@ BALTIC.ToolsController = (function(module){
 
     view.openWindow = function(event){
         var activePnl = $(event).parents('.pnl');
-        var panels = $('.pos-t-l').not($(event)).parents('.pnl');
+        var panels = $('.pos-t-l').not($(event)).parents('.pnl-container').filter(':visible').find('.pnl');
 
-        var widthMain = $('.pnl-container').width();
-        var heightMain = $('.pnl-container').height();
+        var widthMain = $('.pnl-container').filter(':visible').outerWidth();
+        var heightMain = $('.pnl-container').filter(':visible').outerHeight();
 
-        var panelWidth = panels.width();
-        var panelHeight = panels.height();
+        var panelWidth = panels.filter(':hidden').outerWidth();
+        var panelHeight = panels.filter(':hidden').outerHeight();
 
 
-        if($('.pnl').filter(':hidden').length == 0){
+        if(panels.filter(':hidden').length == 0){
             panels.fadeOut(100, function(){
+                activePnl.show();
                 activePnl.animate({
                     'width':widthMain,
                     'height':heightMain
@@ -73,7 +74,7 @@ BALTIC.ToolsController = (function(module){
 
     view.switcherRole = function(role){
         var configRole = RoleConfig.roles[role];
-        var wrapCharts = $('.grapholder');
+        var wrapCharts = $('.grapholder').parents('.pnl-container').filter(':visible').find('.grapholder');
         var loseBlocks = wrapCharts.length-configRole.length;
         for(var i=0; i<configRole.length; i++){
            $(wrapCharts).eq(i).attr('data-configid', configRole[i]);
