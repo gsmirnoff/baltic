@@ -44,11 +44,26 @@ var chartConfigs = {
         withLineChart:true,
         lineColor:'#b5ca92'
     },
-    glassNov:{
+    glassNov:{//4.1.4
         csv:'data/glass_nov.csv',
         colorSet:['#89a54e'],
         tips:['x', 'y'],
         withLineChart:true,
         lineColor:'#b5ca92'
+    },
+    potBaltic:{//4.2.1
+        csv:'data/pot_baltic.csv',
+        colorSet:['#89a54e'],
+        tips:['x', 'y'],
+        withLineChart:true,
+        lineColor:'#b5ca92'
+    },
+    potYear:{//4.2.2
+        csv:'data/pot_2013.csv',
+        colorSet:['#4f81bd'],
+        tips:['x', 'y'],
+        hideX:true,
+        withLineChart:true,
+        lineColor:'#8ea5cb'
     }
 }
