@@ -69,18 +69,19 @@ BALTIC.ToolsController = (function(module){
 //            activePnl.find('.pnl-content').append(panels.find($('.chart')[0]).addClass('delete'));
 //            activePnl.find('.pnl-content').append(panels.find($('.chart')[1]).addClass('delete'));
 //            activePnl.find('.pnl-content').append(panels.find($('.chart')[0]).addClass('delete'));
-            panels.find($('.chart')).eq(2).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
-            panels.find($('.chart')).eq(1).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
-            panels.find($('.chart')).eq(0).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
-            activePnl.find('.delete').css({
-                'display':'inline-block',
-                'margin':'10px;'
-            });
+//            panels.find($('.chart')).eq(2).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
+//            panels.find($('.chart')).eq(1).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
+//            panels.find($('.chart')).eq(0).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
+//            activePnl.find('.delete').css({
+//                'display':'inline-block',
+//                'margin':'10px;'
+//            });
             var mainChart = activePnl.find('.chart').not('.delete');
             mainChart.css({
-                width:'800px',
-                height:'300px'
-            }).find('.grapholder-inner').css({width:'800px', height:'300px'});
+                width:'1000px',
+                height:'500px',
+                marginLeft: '45px'
+            }).find('.grapholder-inner').css({width:'1000px', height:'500px'});
             charts.updateCharts(mainChart);
         }else{
             activePnl.animate({
