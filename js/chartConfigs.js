@@ -50,5 +50,12 @@ var chartConfigs = {
         tips:['x', 'y'],
         withLineChart:true,
         lineColor:'#b5ca92'
+    },
+    potFactory:{
+        csv:'data/pot_factory.csv',
+        colorSet:['#89a54e'],
+        tips:['x', 'y'],
+        withLineChart:true,
+        lineColor:'#b5ca92'
     }
 }
