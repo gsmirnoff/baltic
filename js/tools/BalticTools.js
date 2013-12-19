@@ -106,7 +106,7 @@ BALTIC.ToolsController = (function(module){
     };
 
     view.switcherRole = function(role){
-        var configRole = RoleConfig.roles[role];
+        var configRole = RoleConfig.roles[role][window.location.hash.replace('#', '')];
         var wrapCharts = $('.grapholder').parents('.pnl-container').filter(':visible').find('.grapholder');
         $(wrapCharts).find('.grapholder-inner').empty();
         $(wrapCharts).parent().prev().empty();

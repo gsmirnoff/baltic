@@ -48,6 +48,7 @@ $(document).ready(function(){
 
     $('.col-icon .link-icon').bind('click', function(event){
          if($(event.currentTarget).attr('panel')){
+             var group = $(event.target).parent().parent().parent().attr('href');
              var classVis = $(event.currentTarget).attr('panel');
               $('.nav-icons').fadeOut(200, function(){
                   $('.'+classVis).fadeIn(200);
