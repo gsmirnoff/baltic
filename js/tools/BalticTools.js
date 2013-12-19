@@ -40,7 +40,7 @@ BALTIC.ToolsController = (function(module){
 
     view.openWindow = function(event){
         var activePnl = $(event).parents('.pnl');
-        var panels = $('.pos-t-l').not($(event)).parents('.pnl-container').filter(':visible').find('.pnl');
+        var panels = $('.pos-t-l').parents('.pnl-container').filter(':visible').find('.pnl').not($(event).parents('.pnl'));
 
         var widthMain = $('.pnl-container').filter(':visible').outerWidth();
         var heightMain = $('.pnl-container').filter(':visible').outerHeight();
@@ -51,18 +51,17 @@ BALTIC.ToolsController = (function(module){
 
         if(panels.filter(':hidden').length == 0){
             panels.fadeOut(100, function(){
-                activePnl.show();
+
                 activePnl.find('.pml-inner').css('height', '660px');
                 activePnl.find('.pnl-content').css({'height':'585px', 'width':'auto'});
-
 
                 activePnl.animate({
                     'width':widthMain,
                     'height':heightMain
                 }, 200);
-
                 $(event).children().removeClass('icon-maximize').addClass('icon-minimize');
             });
+
         }else{
             activePnl.animate({
                 'width':panelWidth,
