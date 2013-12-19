@@ -20,6 +20,9 @@ var messages = {
     dec:'Декабрь',
     tula:'Тула',
     yaroslavl:'Ярославль',
+    company:'Компания',
+    fact:'факт',
+    plan:'план',
     totalForCompany:'Итого по компании',
     volumes:'Объемы, тыс. кг',
     lossMalt:'Потери экстракта при производстве солода, %',
@@ -31,6 +34,7 @@ var messages = {
     totalExtractLossesByFactory:'Итого потери экстракта по заводу',
     targetExtractLosses:'Цель потерь экстракта',
     avgByYear:'Среднее за год',
+    yearTotal:'год, итог',
     totalExtractLossesByMaltFactory:'Общие потери экстракта по солодовенному цеху,%',
     extractLossesStatsBaltic:'Статистика потерь экстракта по стадиям, завод "Балтика-СПб"',
 

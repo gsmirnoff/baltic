@@ -33,11 +33,29 @@ var charts = (function (configs) {
                 chartData.push(paramData);
             }
 
+            //todo move to separate method
+            var lineChartData, line;
+            if (config.withLineChart) {
+                var planIdx = null;
+                $.each(chartData, function (idx, elem) {
+                    if (this.key == 'plan') {
+                        planIdx = idx;
+                    }
+                });
+                lineChartData = chartData.splice(planIdx, 1)[0].values;
+                line = d3.svg.line()
+                    .x(function (d, i) {
+                        return x(d.x) + x.rangeBand() / 2;
+                    })
+                    .y(function (d) {
+                        return y(d.y);
+                    });
+            }
 
             //then draw chart itself
             var margin = {top: 20, right: 10, bottom: 20, left: 25},
-                width = 330 - margin.left - margin.right,
-                height = 200 - margin.top - margin.bottom,
+                width = config.width - margin.left - margin.right,
+                height = config.height - margin.top - margin.bottom,
                 keys = chartData[0].values.map(function (item) {
                     return item.x
                 }),
@@ -100,8 +118,10 @@ var charts = (function (configs) {
             var tip = d3.tip()
                 .attr('class', 'd3-tip')
                 .offset([-10, 0])
-                .html(function(d) {
-                    var tipValues = $.map(config.tips, function(param) {return d[param]});
+                .html(function (d) {
+                    var tipValues = $.map(config.tips, function (param) {
+                        return d[param]
+                    });
                     return "<span style='color:gray'>" + tipValues.join(': ') + "</span>";
                 });
             svg.call(tip);
@@ -124,8 +144,6 @@ var charts = (function (configs) {
                 .on('mouseover', tip.show)
                 .on('mouseout', tip.hide);
 
-
-
             svg.append("g")
                 .attr("class", "x axis")
                 .attr("transform", "translate(0," + height + ")")
@@ -135,21 +153,37 @@ var charts = (function (configs) {
                 .attr("class", "y axis")
                 .call(yAxis);
 
+            if (config.withLineChart) {
+                svg.append('path').attr('d', line(lineChartData))
+                    .attr("stroke", config.lineColor)
+                    .attr("stroke-width", 2)
+                    .attr("fill", "none");
+            }
+
+
             svg.selectAll('.x.axis').selectAll('.tick').selectAll('text')
-                .style('font-size', config.hideX?0:10);
+                .style('font-size', config.hideX ? 0 : 10);
             svg.selectAll('.y.axis').selectAll('.tick').selectAll('text')
                 .style('font-size', 10);
         })
-    }
-    $(document).ready(function () {
+    };
+
+    var updateView = function () {
         var placeHolders = $('.chart');
         for (var i = 0; i < placeHolders.length; i++) {
             var placeHolder = $(placeHolders.get(i));
             if (placeHolder.data('configid')) {
                 var configId = placeHolder.data('configid');
                 placeHolder = placeHolder.find('.grapholder-inner').empty();
-                drawChart(configs[configId], placeHolder[0]);
+                var config = $.extend({}, configs[configId], {width:placeHolder.width(), height:placeHolder.height()});
+                drawChart(config, placeHolder[0]);
             }
         }
-    })
+    }
+    $(document).ready(function () {
+        updateView();
+    });
+    return {
+        updateCharts: updateView
+    }
 })(chartConfigs)
