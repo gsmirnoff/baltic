@@ -44,10 +44,10 @@ var charts = (function (configs) {
                 });
                 lineChartData = chartData.splice(planIdx, 1)[0].values;
                 line = d3.svg.line()
-                    .x(function(d, i) {
-                        return x(d.x)+ x.rangeBand()/2;
+                    .x(function (d, i) {
+                        return x(d.x) + x.rangeBand() / 2;
                     })
-                    .y(function(d) {
+                    .y(function (d) {
                         return y(d.y);
                     });
             }
@@ -156,8 +156,8 @@ var charts = (function (configs) {
             if (config.withLineChart) {
                 svg.append('path').attr('d', line(lineChartData))
                     .attr("stroke", config.lineColor)
-                     .attr("stroke-width", 2)
-                     .attr("fill", "none");
+                    .attr("stroke-width", 2)
+                    .attr("fill", "none");
             }
 
 
@@ -166,8 +166,9 @@ var charts = (function (configs) {
             svg.selectAll('.y.axis').selectAll('.tick').selectAll('text')
                 .style('font-size', 10);
         })
-    }
-    $(document).ready(function () {
+    };
+
+    var updateView = function () {
         var placeHolders = $('.chart');
         for (var i = 0; i < placeHolders.length; i++) {
             var placeHolder = $(placeHolders.get(i));
@@ -177,5 +178,11 @@ var charts = (function (configs) {
                 drawChart(configs[configId], placeHolder[0]);
             }
         }
-    })
+    }
+    $(document).ready(function () {
+        updateView();
+    });
+    return {
+        updateCharts: updateView
+    }
 })(chartConfigs)
