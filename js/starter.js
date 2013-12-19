@@ -32,6 +32,7 @@ $(document).ready(function(){
 
     $('.pos-t-l').bind('click', function(event){
        BALTIC.ToolsController.openWindow(event.currentTarget);
+
     });
 
     $('.role').bind('click', function(event){
