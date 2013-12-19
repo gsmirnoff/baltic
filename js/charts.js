@@ -5,9 +5,9 @@
  * Time: 13:33
  * To change this template use File | Settings | File Templates.
  */
-var charts = (function () {
-    var drawChart = function (csvlocation, placeholder) {
-        d3.text(csvlocation, function (csvText) {
+var charts = (function (configs) {
+    var drawChart = function (config, placeholder) {
+        d3.text(config.csv, function (csvText) {
             var parsed = d3.csv.parseRows(csvText.replace(/\s*;\s*/g, ","));
 
             //in 1st cell there is name of chart and names of cells
@@ -69,7 +69,7 @@ var charts = (function () {
 
             var color = d3.scale.ordinal()
                 .domain([0, chartData.length - 1])
-                .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+                .range(config.colorSet || ["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
             var yAxis = d3.svg.axis()
                 .scale(y)
@@ -103,7 +103,7 @@ var charts = (function () {
                 })
                 .enter().append("rect")
                 //.attr("fill-opacity", .5)
-                .attr("stroke", "#000")
+                //.attr("stroke", "#000")
                 .attr("width", x.rangeBand())
                 .attr("x", function (d) {
                     return x(d.x);
@@ -129,13 +129,14 @@ var charts = (function () {
         })
     }
     $(document).ready(function () {
-        var csvs = ['data/solod_2013.csv', 'data/syrop_total.csv'];
         var placeHolders = $('.chart');
         for (var i = 0; i < placeHolders.length; i++) {
-            if (csvs[i] != null) {
-                var placeHolder = $(placeHolders.get(i)).find('.grapholder-inner').empty();
-                drawChart(csvs[i], placeHolder[0]);
+            var placeHolder = $(placeHolders.get(i));
+            if (placeHolder.data('configid')) {
+                var configId = placeHolder.data('configid');
+                placeHolder = placeHolder.find('.grapholder-inner').empty();
+                drawChart(configs[configId], placeHolder[0]);
             }
         }
     })
-})()
+})(chartConfigs)
