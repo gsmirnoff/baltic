@@ -1,0 +1,7 @@
+lossMalt; ; ; 
+stageLosses;tula;yaroslavl;totalForCompany
+barleyTransportationLosses;0.47;0;0.25
+barleySortingLosses;0;0.16;0.08
+maltProductionLosses;1.33;1.55;1.43
+cerealTransportLosses;0.05;0.13;0.09
+totalExtractLossesByFactory;2.05;2.12;2.09
