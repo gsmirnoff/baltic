@@ -8,9 +8,6 @@ var chartConfigs = {
         csv:'data/syrop_total.csv',
         colorSet:['#4f81bd'],
         tips:['x', 'y'],
-        axis:{
-            x:{trasform:'rotate(-45)'},
-            y:null
-        }
+        hideX:true
     }
 }

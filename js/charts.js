@@ -135,7 +135,9 @@ var charts = (function (configs) {
                 .attr("class", "y axis")
                 .call(yAxis);
 
-            svg.selectAll('.tick').selectAll('text')
+            svg.selectAll('.x.axis').selectAll('.tick').selectAll('text')
+                .style('font-size', config.hideX?0:10);
+            svg.selectAll('.y.axis').selectAll('.tick').selectAll('text')
                 .style('font-size', 10);
         })
     }
