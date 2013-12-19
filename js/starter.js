@@ -23,5 +23,11 @@ $(document).ready(function(){
     $('.main-item-nav > a').bind('click', function(event){
          BALTIC.ToolsController.showMenu(event.currentTarget);
     });
+
+    $(document).bind('click', function(event){
+        if($('.main-item-nav').find($(event.target)).length == 0){
+            BALTIC.ToolsController.hideMenu();
+        }
+    })
 });
 
