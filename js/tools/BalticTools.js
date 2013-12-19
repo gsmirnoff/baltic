@@ -12,13 +12,16 @@ BALTIC.ToolsController = (function(module){
     view.showMenu = function(event){
 
         var menu = $(event).next();
-        var eventClass = $(event).parent().attr('class');
-        $('.'+eventClass+' > a').addClass('hide').fadeOut(300, function(){
-            menu.addClass('show');
-            menu.animate({
-                'left':0
+        if(menu.length != 0){
+            var eventClass = $(event).parent().attr('class');
+            $('.'+eventClass+' > a').addClass('hide').fadeOut(300, function(){
+                menu.addClass('show');
+                menu.animate({
+                    'left':0
+                });
             });
-        });
+        }
+
     };
 
     view.hideMenu = function(){
@@ -59,9 +62,20 @@ BALTIC.ToolsController = (function(module){
                     'width':widthMain,
                     'height':heightMain
                 }, 200);
+
                 $(event).children().removeClass('icon-maximize').addClass('icon-minimize');
             });
 
+//            activePnl.find('.pnl-content').append(panels.find($('.chart')[0]).addClass('delete'));
+//            activePnl.find('.pnl-content').append(panels.find($('.chart')[1]).addClass('delete'));
+//            activePnl.find('.pnl-content').append(panels.find($('.chart')[0]).addClass('delete'));
+            panels.find($('.chart')).eq(2).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
+            panels.find($('.chart')).eq(1).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
+            panels.find($('.chart')).eq(0).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
+            activePnl.find('.delete').css({
+                'display':'inline-block',
+                'margin':'10px;'
+            })
         }else{
             activePnl.animate({
                 'width':panelWidth,
@@ -74,7 +88,9 @@ BALTIC.ToolsController = (function(module){
                 panels.fadeIn(100);
                 $(event).children().addClass('icon-maximize').removeClass('icon-minimize');
             });
-
+//           $('.delete').remove();
+            activePnl.find('.delete').remove();
+            panels.find('.delete').removeClass('delete');
         }
 
     };
