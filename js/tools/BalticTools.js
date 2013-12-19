@@ -52,6 +52,10 @@ BALTIC.ToolsController = (function(module){
         if(panels.filter(':hidden').length == 0){
             panels.fadeOut(100, function(){
                 activePnl.show();
+                activePnl.find('.pml-inner').css('height', '660px');
+                activePnl.find('.pnl-content').css({'height':'585px', 'width':'auto'});
+
+
                 activePnl.animate({
                     'width':widthMain,
                     'height':heightMain
@@ -64,6 +68,10 @@ BALTIC.ToolsController = (function(module){
                 'width':panelWidth,
                 'height':panelHeight
             }, 200, function(){
+                activePnl.find('.pml-inner').css('height', 'auto');
+                activePnl.find('.pnl-content').css({'height':'247px', 'width':'auto'});
+
+                activePnl.find('.chart').css('display', 'inline-block');
                 panels.fadeIn(100);
                 $(event).children().addClass('icon-maximize').removeClass('icon-minimize');
             });
@@ -75,6 +83,7 @@ BALTIC.ToolsController = (function(module){
     view.switcherRole = function(role){
         var configRole = RoleConfig.roles[role];
         var wrapCharts = $('.grapholder').parents('.pnl-container').filter(':visible').find('.grapholder');
+
         var loseBlocks = wrapCharts.length-configRole.length;
         for(var i=0; i<configRole.length; i++){
            $(wrapCharts).eq(i).attr('data-configid', configRole[i]);
