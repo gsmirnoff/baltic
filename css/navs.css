@@ -143,6 +143,17 @@ nav a {
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     border-radius:10px;
+    display: none;
+}
+.menu-right {
+width: 75px;
+height: 21px;
+}
+.menu-right .block-content li {
+display: block;
+}
+.menu-right .block-content a {
+font-size: 13px;
 }
 .nav-action .block-sub .block-content {
     min-height: 50px;

@@ -23,10 +23,20 @@ $(document).ready(function(){
     $('.main-item-nav > a').bind('click', function(event){
          BALTIC.ToolsController.showMenu(event.currentTarget);
     });
+    
+    $('.menu-right > a').bind('click', function(event){
+    	$(event.currentTarget).fadeOut(200);
+    	$(event.currentTarget).next().fadeIn(200);    	
+    });
 
     $(document).bind('click', function(event){
         if($('.main-item-nav').find($(event.target)).length == 0){
             BALTIC.ToolsController.hideMenu();
+        }
+        
+        if($('.menu-right').find($(event.target)).length == 0){
+        	$('.menu-right > a').fadeIn(200);
+    	    $('.menu-right > a').next().fadeOut(200);
         }
     });
 
