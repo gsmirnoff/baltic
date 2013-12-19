@@ -54,8 +54,8 @@ var charts = (function (configs) {
 
             //then draw chart itself
             var margin = {top: 20, right: 10, bottom: 20, left: 25},
-                width = 330 - margin.left - margin.right,
-                height = 200 - margin.top - margin.bottom,
+                width = config.width - margin.left - margin.right,
+                height = config.height - margin.top - margin.bottom,
                 keys = chartData[0].values.map(function (item) {
                     return item.x
                 }),
@@ -175,7 +175,8 @@ var charts = (function (configs) {
             if (placeHolder.data('configid')) {
                 var configId = placeHolder.data('configid');
                 placeHolder = placeHolder.find('.grapholder-inner').empty();
-                drawChart(configs[configId], placeHolder[0]);
+                var config = $.extend({}, configs[configId], {width:placeHolder.width(), height:placeHolder.height()});
+                drawChart(config, placeHolder[0]);
             }
         }
     }
