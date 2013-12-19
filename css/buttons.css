@@ -131,6 +131,13 @@ a.btn {
     line-height: 32px;
     font-size: 32px;
 }
+.btn-discuss .icon-discuss {
+    width: 51px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 36px;
+
+}
 .btn-icon .icon-large {
     width: 60px;
     height: 55px;

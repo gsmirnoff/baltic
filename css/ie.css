@@ -1,6 +1,7 @@
 body {
     behavior: url(backgroundsize.min.htc);
 }
+
 .pnl-container {
     width:auto;
     min-width:880px;

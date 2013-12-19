@@ -51,7 +51,7 @@
 }
 .icon-external {
     background-image:url(../img/icon_external.png);
-    background-position: 80% 50%;
+    background-position: 80% 0;
 
 }
 .icon-search {
@@ -124,8 +124,43 @@
 .icon-close {
     background-image:url(../img/icon_close.png);
 }
+.col-pin-xlarge .icon-close {
+    background-image:url(../img/icon_close_grey.png);
+}
 .icon-arrow-down {
     background-image:url(../img/icon_arrow_down.png);
+}
+.icon-pin {
+    background-image:url(../img/icon_pin.png);
+}
+.col-pin-xlarge .icon-arrow-up {
+    background-image:url(../img/icon_arrow_up_grey.png);
+}
+.col-pin-xlarge .icon-maximize {
+    background-image:url(../img/icon_maximize_grey.png);
+}
+.icon-carousel-next,
+.icon-carousel-prev {
+    width:43px;
+    height: 170px;
+}
+.icon-carousel-next:hover,
+.icon-carousel-prev:hover {
+    background-color: transparent;
+}
+.icon-carousel-next {
+    background-image:url(../img/icon_carousel_arrow_next.png);
+}
+.icon-carousel-prev {
+    background-image:url(../img/icon_carousel_arrow_prev.png);
+}
+.icon-discuss {
+    background-image:url(../img/icon_discuss.png);
+    width:51px;
+    height: 36px;
+}
+.icon-blocks {
+    background-image:url(../img/icon_blocks.png);
 }
 /* icons on panels */
 .pnl .icon:hover {
@@ -136,22 +171,25 @@
 }
 .icon-t-l, .pos-t-l {
     position: absolute;
-    top:4px;
-    left:4px;
+    top:3px;
+    left:3px;
 }
 .icon-t-r, .pos-t-r {
     position: absolute;
-    top:4px;
-    right:4px;
+    top:3px;
+    right:3px;
+}
+.pos-t-r + .pos-t-r {
+    right:30px;
 }
 .pos-b-r {
     position: absolute;
-    bottom:4px;
-    right:4px;
+    bottom:3px;
+    right:3px;
 
 }
 .pos-b-l {
     position: absolute;
-    bottom:4px;
-    left:4px;
+    bottom:3px;
+    left:3px;
 }

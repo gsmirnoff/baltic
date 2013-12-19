@@ -38,5 +38,21 @@ $(document).ready(function(){
          var role = $(event.currentTarget).attr('role');
         BALTIC.ToolsController.switcherRole(role);
     });
+
+    $('.icon-kpi').bind('click', function(){
+         $('.pnl-container').hide(100, function(){
+            $('.nav-icons').fadeIn(200);
+         })
+    });
+
+    $('.col-icon .link-icon').bind('click', function(event){
+         if($(event.currentTarget).attr('panel')){
+             var classVis = $(event.currentTarget).attr('panel');
+              $('.nav-icons').fadeOut(200, function(){
+                  $('.'+classVis).fadeIn(200);
+              });
+
+         }
+    });
 });
 
