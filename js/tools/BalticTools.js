@@ -77,6 +77,7 @@ BALTIC.ToolsController = (function(module){
         var loseBlocks = wrapCharts.length-configRole.length;
         for(var i=0; i<configRole.length; i++){
            $(wrapCharts).eq(i).attr('data-configid', configRole[i]);
+            $(wrapCharts).eq(i).removeClass('empty-charts-add');
         }
 
         for(var j = loseBlocks; j<wrapCharts.length; j++){
