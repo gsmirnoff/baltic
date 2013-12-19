@@ -97,13 +97,20 @@ var charts = (function (configs) {
                     return color(i);
                 });
 
+            var tip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function(d) {
+                    var tipValues = $.map(config.tips, function(param) {return d[param]});
+                    return "<span style='color:gray'>" + tipValues.join(': ') + "</span>";
+                });
+            svg.call(tip);
+
             layer.selectAll("rect")
                 .data(function (d) {
                     return d.values;
                 })
                 .enter().append("rect")
-                //.attr("fill-opacity", .5)
-                //.attr("stroke", "#000")
                 .attr("width", x.rangeBand())
                 .attr("x", function (d) {
                     return x(d.x);
@@ -113,10 +120,11 @@ var charts = (function (configs) {
                 })
                 .attr("height", function (d) {
                     return y(d.y0) - y(d.y0 + d.y);
-                });
+                })
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide);
 
-            svg.selectAll('.tick').selectAll('text')
-                .style('font-size', 10);
+
 
             svg.append("g")
                 .attr("class", "x axis")
@@ -126,6 +134,9 @@ var charts = (function (configs) {
             svg.append("g")
                 .attr("class", "y axis")
                 .call(yAxis);
+
+            svg.selectAll('.tick').selectAll('text')
+                .style('font-size', 10);
         })
     }
     $(document).ready(function () {

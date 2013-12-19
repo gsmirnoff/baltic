@@ -30,7 +30,7 @@ var messages = {
     cerealTransportLosses:'Потери при внутризаводской транспортировке зернопродуктов, %',
     totalExtractLossesByFactory:'Итого потери экстракта по заводу',
     targetExtractLosses:'Цель потерь экстракта',
-    avgByYearL:'Среднее за год',
+    avgByYear:'Среднее за год',
     totalExtractLossesByMaltFactory:'Общие потери экстракта по солодовенному цеху,%',
     extractLossesStatsBaltic:'Статистика потерь экстракта по стадиям, завод "Балтика-СПб"',
 
