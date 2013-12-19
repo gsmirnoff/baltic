@@ -16,9 +16,9 @@
 <div class="wrapper">
 
     <!-- nav-main -->
-    <nav class="nav-main hidden">
+    <nav class="nav-main">
         <ul>
-            <li>
+            <li class="main-item-nav">
                 <a href="javascript:;"><i class="icon icon-menu"></i><span class="badge">2</span></a>
                 <ul class="ul-sub visible">
                     <li>
@@ -48,11 +48,34 @@
                     </li>
                 </ul>
             </li>
-            <li>
+            <li class="main-item-nav">
                 <a href="javascript:;"><i class="icon icon-search"></i></a>
             </li>
-            <li>
+            <li class="main-item-nav">
                 <a href="javascript:;"><i class="icon icon-help"></i></a>
+                 <span class="block-sub visible">
+                    <span class="block-inner">
+                        <span class="block-header">
+                            <span class="search">
+                                <input type="text" placeholder="Введите запрос" />
+                            </span>
+                        </span>
+                        <span class="block-content">
+                            <h3>Последние запросы</h3>
+                            <ul>
+                                <li><a href="javascript:;">ТЗ</a></li>
+                                <li><a href="javascript:;">Заявление на отпуск</a></li>
+                                <li><a href="javascript:;">Шаблон</a></li>
+                                <li><a href="javascript:;">Новому сотруднику</a></li>
+                                <li><a href="javascript:;">Отдел кадров</a></li>
+                                <li><a href="javascript:;">Ивакин Алексей</a></li>
+                            </ul>
+                        </span>
+                        <span class="block-bottom">
+                            <a href="javascript:;">Карта сайта</a>
+                        </span>
+                    </span>
+                </span>
             </li>
         </ul>
     </nav>
@@ -202,5 +225,7 @@
 <!-- /wrapper -->
 
 <script src="js/libs/jquery-1.10.2.min.js"></script>
+<script src="js/starter.js"></script>
+<script src="js/tools/BalticTools.js"></script>
 </body>
 </html>

@@ -9,10 +9,15 @@
 BALTIC.ToolsController = (function(module){
     var view = {};
 
+    view.showMenu = function(event){
 
-
-    view.init = function(){
-
+        var menu = $(event).next();
+        var eventClass = $(event).parent().attr('class');
+        $('.'+eventClass+' > a').addClass('hide').fadeOut(300, function(){
+            menu.animate({
+                'left':0
+            });
+        });
     };
 
     return view;

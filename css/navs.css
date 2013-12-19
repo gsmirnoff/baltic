@@ -54,7 +54,7 @@ nav .badge {
     background:transparent url(../img/bg_sub.png) 0 0 repeat;
     height: auto;
     position: absolute;
-    left:0;
+    left: -300px;
     top:10px;
     z-index: 5;
     -webkit-border-top-right-radius:9px;

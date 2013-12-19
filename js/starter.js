@@ -19,5 +19,9 @@ var BALTIC = (function(m){
 
 $(document).ready(function(){
    BALTIC.init();
+
+    $('.main-item-nav > a').bind('click', function(event){
+         BALTIC.ToolsController.showMenu(event.currentTarget);
+    });
 });
 
