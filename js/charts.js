@@ -21,6 +21,8 @@ var charts = (function (configs) {
             for (var i = 0; i < colHeaders.length; i++) colHeaders[i] = messages.get(colHeaders[i]);
             var header = messages.get(headers[0]);
 
+            $(placeholder).parent().parent().prev().empty().append($('<span/>', {'class':'header-text', text:header}));
+
             var chartData = [];
             for (var i = 0; i < legend.length; i++) {
                 var paramData = {
