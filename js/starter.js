@@ -50,8 +50,8 @@ $(document).ready(function(){
              var classVis = $(event.currentTarget).attr('panel');
               $('.nav-icons').fadeOut(200, function(){
                   $('.'+classVis).fadeIn(200);
+                  BALTIC.ToolsController.switcherRole('role1');
               });
-
          }
     });
 });
