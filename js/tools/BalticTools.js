@@ -71,5 +71,19 @@ BALTIC.ToolsController = (function(module){
 
     };
 
+    view.switcherRole = function(role){
+        var configRole = RoleConfig.roles[role];
+        var wrapCharts = $('.grapholder');
+        var loseBlocks = wrapCharts.length-configRole.length;
+        for(var i=0; i<configRole.length; i++){
+           $(wrapCharts).eq(i).attr('data-configid', configRole[i]);
+        }
+
+        for(var j = loseBlocks; j<wrapCharts.length; j++){
+            $(wrapCharts).eq(j).attr('data-configid', "");
+            $(wrapCharts).eq(j).addClass('empty-charts-add');
+        }
+    };
+
     return view;
 }(BALTIC));

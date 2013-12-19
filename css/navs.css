@@ -135,3 +135,29 @@ nav .alerts .badge {
     top:0;
     right: 0;
 }
+
+.nav-action li {
+    display: inline-block;
+}
+
+.nav-action a {
+    font-family: Tahoma;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0px 15px;
+}
+
+.nav-action a:hover {
+    text-decoration: underline;
+}
+
+.empty-charts-add{
+    background-image: url(../img/blue-plus.png);
+    background-repeat: no-repeat;
+    background-position: 136px 56px;
+}
+
+.grapholder-inner img{
+    display: none;
+}

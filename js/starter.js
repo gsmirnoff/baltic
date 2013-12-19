@@ -33,5 +33,10 @@ $(document).ready(function(){
     $('.pos-t-l').bind('click', function(event){
        BALTIC.ToolsController.openWindow(event.currentTarget);
     });
+
+    $('.role').bind('click', function(event){
+         var role = $(event.currentTarget).attr('role');
+        BALTIC.ToolsController.switcherRole(role);
+    });
 });
 
