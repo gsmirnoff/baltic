@@ -177,8 +177,16 @@ var charts = (function (configs) {
             if (placeHolder.data('configid')) {
                 var configId = placeHolder.data('configid');
                 placeHolder = placeHolder.find('.grapholder-inner').empty();
-                var config = $.extend({}, configs[configId], {width:placeHolder.width(), height:placeHolder.height()});
-                drawChart(config, placeHolder[0]);
+                var config = $.extend({}, configs[configId], {width: placeHolder.width(), height: placeHolder.height()});
+                if (config.csv) {
+                    drawChart(config, placeHolder[0]);
+                } else if (config.image) {
+                    placeHolder.append($('<img/>', {src: config.image}).css({
+                        width: placeHolder.width() - 10,
+                        height: placeHolder.height() - 10,
+                        padding: '5px'
+                    }))
+                }
             }
         }
     }

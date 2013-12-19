@@ -68,7 +68,7 @@ BALTIC.ToolsController = (function(module){
                 'height':panelHeight
             }, 200, function(){
                 activePnl.find('.pml-inner').css('height', 'auto');
-                activePnl.find('.pnl-content').css({'height':'247px', 'width':'auto'});
+                activePnl.find('.pnl-content').css({'height':'auto', 'width':'auto'});
 
                 activePnl.find('.chart').css('display', 'inline-block');
                 panels.fadeIn(100);
