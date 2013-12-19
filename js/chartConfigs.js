@@ -21,7 +21,7 @@ var chartConfigs = {
         tips:['x', 'y'],
         hideX:true
     },
-    glassYear:{//don't use it for now
+    glassYear:{//4.1.2
         csv:'data/glass_2013.csv',
         colorSet:['#4f81bd'],
         tips:['x', 'y'],
