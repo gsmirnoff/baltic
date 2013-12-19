@@ -43,5 +43,12 @@ var chartConfigs = {
         tips:['x', 'y'],
         withLineChart:true,
         lineColor:'#b5ca92'
+    },
+    glassNov:{
+        csv:'data/glass_nov.csv',
+        colorSet:['#89a54e'],
+        tips:['x', 'y'],
+        withLineChart:true,
+        lineColor:'#b5ca92'
     }
 }
