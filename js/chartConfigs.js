@@ -36,5 +36,12 @@ var chartConfigs = {
         hideX:true,
         withLineChart:true,
         lineColor:'#8ea5cb'
+    },
+    glassFactory:{//4.1.3
+        csv:'data/glass_factory.csv',
+        colorSet:['#89a54e'],
+        tips:['x', 'y'],
+        withLineChart:true,
+        lineColor:'#b5ca92'
     }
 }
