@@ -75,12 +75,19 @@ BALTIC.ToolsController = (function(module){
             activePnl.find('.delete').css({
                 'display':'inline-block',
                 'margin':'10px;'
-            })
+            });
+            var mainChart = activePnl.find('.chart').not('.delete');
+            mainChart.css({
+                width:'800px',
+                height:'300px'
+            }).find('.grapholder-inner').css({width:'800px', height:'300px'});
+            charts.updateCharts(mainChart);
         }else{
             activePnl.animate({
                 'width':panelWidth,
                 'height':panelHeight
             }, 200, function(){
+
                 activePnl.find('.pml-inner').css('height', 'auto');
                 activePnl.find('.pnl-content').css({'height':'auto', 'width':'auto'});
 
@@ -89,6 +96,9 @@ BALTIC.ToolsController = (function(module){
                 $(event).children().addClass('icon-maximize').removeClass('icon-minimize');
             });
 //           $('.delete').remove();
+            var mainChart = activePnl.find('.chart').not('.delete');
+            mainChart.removeAttr('style').find('.grapholder-inner').removeAttr('style');
+            charts.updateCharts(mainChart);
             activePnl.find('.delete').remove();
             panels.find('.delete').removeClass('delete');
         }

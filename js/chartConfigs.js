@@ -65,5 +65,17 @@ var chartConfigs = {
         hideX:true,
         withLineChart:true,
         lineColor:'#8ea5cb'
+    },
+    extractLossYear:{
+        image:'img/charts/3.3.jpg',
+        header:'Потери экстракта (%) по заводам YTD Компании за 2013 г.'
+    },
+    extractLossNov:{
+        image:'img/charts/3.2.jpg',
+        header:'Потери экстракта (%) по заводам Компании за ноябрь 2013 г.'
+    },
+    extractLossBaltic:{
+        image:'img/charts/3.1.jpg',
+        header:'Статистика потерь экстракта по стадиям, завод Балтика-Ярославль'
     }
 }
