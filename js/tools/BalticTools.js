@@ -16,4 +16,4 @@ BALTIC.ToolsController = (function(module){
     };
 
     return view;
-}(Zero));
+}(BALTIC));
