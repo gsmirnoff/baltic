@@ -14,10 +14,28 @@ BALTIC.ToolsController = (function(module){
         var menu = $(event).next();
         var eventClass = $(event).parent().attr('class');
         $('.'+eventClass+' > a').addClass('hide').fadeOut(300, function(){
+            menu.addClass('show');
             menu.animate({
                 'left':0
             });
         });
+    };
+
+    view.hideMenu = function(){
+        var items = $('.main-item-nav > a');
+
+        for(var i=0; i<items.length; i++){
+            if($(items[i]).next().hasClass('show')){
+                $(items[i]).next().removeClass('show');
+                $(items[i]).next().animate({
+                    'left':'-300px'
+                }, function(){
+                    items.removeClass('hide').fadeIn();
+                });
+
+                return;
+            }
+        }
     };
 
     return view;
