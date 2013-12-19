@@ -75,16 +75,18 @@ BALTIC.ToolsController = (function(module){
     view.switcherRole = function(role){
         var configRole = RoleConfig.roles[role];
         var wrapCharts = $('.grapholder').parents('.pnl-container').filter(':visible').find('.grapholder');
-        var loseBlocks = wrapCharts.length-configRole.length;
+        $(wrapCharts).find('.grapholder-inner').empty();
+
         for(var i=0; i<configRole.length; i++){
-           $(wrapCharts).eq(i).attr('data-configid', configRole[i]);
+           $(wrapCharts).eq(i).data('configid', configRole[i]);
             $(wrapCharts).eq(i).removeClass('empty-charts-add');
         }
 
-        for(var j = loseBlocks; j<wrapCharts.length; j++){
-            $(wrapCharts).eq(j).attr('data-configid', "");
+        for(var j = configRole.length; j<wrapCharts.length; j++){
+            $(wrapCharts).eq(j).data('configid', null);
             $(wrapCharts).eq(j).addClass('empty-charts-add');
         }
+        charts.updateCharts($(wrapCharts).not('.empty-charts-add'));
     };
 
     return view;
