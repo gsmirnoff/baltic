@@ -173,7 +173,7 @@ var charts = (function (configs) {
         for (var i = 0; i < placeHolders.length; i++) {
             var placeHolder = $(placeHolders.get(i));
             if (placeHolder.data('configid')) {
-                var configId = placeHolder.data('configid');//placeHolder.data('configid');
+                var configId = placeHolder.data('configid');
                 placeHolder = placeHolder.find('.grapholder-inner').empty();
                 var config = $.extend({}, configs[configId], {width:placeHolder.width(), height:placeHolder.height()});
                 drawChart(config, placeHolder[0]);

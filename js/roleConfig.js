@@ -9,9 +9,9 @@
 
 var RoleConfig = {
     roles:{
-        role1:['solodBaltic', 'solodYear'],
-        role2:['solodNov', 'syropYear'],
-        role3:['solodBaltic', 'solodYear', 'solodNov']
+        role1:['solodBaltic', 'solodYear', 'syropYear', 'glassYear', 'glassFactory', 'glassNov'],
+        role2:['solodNov', 'syropYear', 'glassBaltic', 'solodYear'],
+        role3:['solodBaltic', 'solodYear', 'solodNov', 'syropYear']
     }
 
 }
