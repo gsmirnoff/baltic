@@ -26,6 +26,15 @@ var chartConfigs = {
         colorSet:['#4f81bd'],
         tips:['x', 'y'],
         hideX:true,
-        withLineChart:true
+        withLineChart:true,
+        lineColor:'#8ea5cb'
+    },
+    glassBaltic:{//4.1.1
+        csv:'data/glass_baltic.csv',
+        colorSet:['#93cddd'],
+        tips:['x', 'y'],
+        hideX:true,
+        withLineChart:true,
+        lineColor:'#8ea5cb'
     }
 }

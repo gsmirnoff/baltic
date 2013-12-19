@@ -155,7 +155,7 @@ var charts = (function (configs) {
 
             if (config.withLineChart) {
                 svg.append('path').attr('d', line(lineChartData))
-                    .attr("stroke", "#8ea5cb")
+                    .attr("stroke", config.lineColor)
                      .attr("stroke-width", 2)
                      .attr("fill", "none");
             }
