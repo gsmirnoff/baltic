@@ -1,0 +1,17 @@
+/* main */
+@import url("reset.css");
+@import url("form.css");
+@import url("icons.css");
+@import url("panels.css");
+@import url("navs.css");
+@import url("workarea.css");
+@import url("buttons.css");
+@import url("layout.css");
+
+.placeholder-screen img {
+    max-width: 100%;
+}
+.landing .wrapper {
+    height: 100%;
+    width: 100%;
+}

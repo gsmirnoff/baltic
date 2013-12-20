@@ -318,3 +318,11 @@ nav .alerts .badge {
     display: block;
 }
 
+
+.placeholder-screen img {
+    max-width: 100%;
+}
+
+.pnl-kpi{
+    display: block !important;
+}

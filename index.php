@@ -1,1 +1,1 @@
-<?php include_once "KPI_online_1level.html" ?>
+<?php include_once "index.html" ?>
