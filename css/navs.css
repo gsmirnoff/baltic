@@ -333,10 +333,10 @@ nav .alerts .badge {
     cursor: pointer;
 }
 
-.pnl-content a {
+.pnl-content > a {
     display: block;
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index:1000;
+    z-index: 1000;
 }
