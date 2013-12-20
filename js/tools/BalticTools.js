@@ -19,6 +19,7 @@ BALTIC.ToolsController = (function(module){
                 menu.animate({
                     'left':0
                 });
+
             });
         }
 
@@ -38,6 +39,8 @@ BALTIC.ToolsController = (function(module){
 
                 return;
             }
+
+
         }
     };
 

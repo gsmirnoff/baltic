@@ -138,11 +138,12 @@ nav a {
 .nav-action .block-sub {
     width:auto;
     left:auto;
-    right:0;
+    right: 0;
     min-width: 140px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     border-radius:10px;
+    display: none;
 }
 .nav-action .block-sub .block-content {
     min-height: 50px;
@@ -296,5 +297,14 @@ nav .alerts .badge {
 
 .nav-action a:hover {
     text-decoration: underline;
+}
+.block-sub a {
+    color: #fff;
+    display: inline !important;
+    font-size: 14px !important;
+}
+
+.block-content li{
+    display: block;
 }
 
