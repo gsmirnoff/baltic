@@ -55,6 +55,7 @@ var chartConfigs = {
         csv:'data/pot_baltic.csv',
         colorSet:['#89a54e'],
         tips:['x', 'y'],
+	hideX:true,
         withLineChart:true,
         lineColor:'#b5ca92'
     },
