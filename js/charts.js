@@ -185,7 +185,8 @@ var charts = (function (configs) {
                         width: placeHolder.width() - 10,
                         height: placeHolder.height() - 10,
                         padding: '5px'
-                    }))
+                    }));
+                    placeHolder.parent().parent().prev().empty().append($('<span/>', {'class':'header-text', text:config.header}));
                 }
             }
         }

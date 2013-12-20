@@ -72,18 +72,26 @@ BALTIC.ToolsController = (function(module){
 //            activePnl.find('.pnl-content').append(panels.find($('.chart')[0]).addClass('delete'));
 //            activePnl.find('.pnl-content').append(panels.find($('.chart')[1]).addClass('delete'));
 //            activePnl.find('.pnl-content').append(panels.find($('.chart')[0]).addClass('delete'));
-            panels.find($('.chart')).eq(2).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
-            panels.find($('.chart')).eq(1).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
-            panels.find($('.chart')).eq(0).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
-            activePnl.find('.delete').css({
-                'display':'inline-block',
-                'margin':'10px;'
-            })
+//            panels.find($('.chart')).eq(2).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
+//            panels.find($('.chart')).eq(1).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
+//            panels.find($('.chart')).eq(0).addClass('delete').clone().prependTo(activePnl.find('.pnl-content'));
+//            activePnl.find('.delete').css({
+//                'display':'inline-block',
+//                'margin':'10px;'
+//            });
+            var mainChart = activePnl.find('.chart').not('.delete');
+            mainChart.css({
+                width:'1000px',
+                height:'500px',
+                marginLeft: '45px'
+            }).find('.grapholder-inner').css({width:'1000px', height:'500px'});
+            charts.updateCharts(mainChart);
         }else{
             activePnl.animate({
                 'width':panelWidth,
                 'height':panelHeight
             }, 200, function(){
+
                 activePnl.find('.pml-inner').css('height', 'auto');
                 activePnl.find('.pnl-content').css({'height':'auto', 'width':'auto'});
 
@@ -92,6 +100,9 @@ BALTIC.ToolsController = (function(module){
                 $(event).children().addClass('icon-maximize').removeClass('icon-minimize');
             });
 //           $('.delete').remove();
+            var mainChart = activePnl.find('.chart').not('.delete');
+            mainChart.removeAttr('style').find('.grapholder-inner').removeAttr('style');
+            charts.updateCharts(mainChart);
             activePnl.find('.delete').remove();
             panels.find('.delete').removeClass('delete');
         }
@@ -99,7 +110,7 @@ BALTIC.ToolsController = (function(module){
     };
 
     view.switcherRole = function(role){
-        var configRole = RoleConfig.roles[role];
+        var configRole = RoleConfig.roles[role][window.location.hash.replace('#', '')];
         var wrapCharts = $('.grapholder').parents('.pnl-container').filter(':visible').find('.grapholder');
         $(wrapCharts).find('.grapholder-inner').empty();
         $(wrapCharts).parent().prev().empty();

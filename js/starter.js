@@ -23,12 +23,22 @@ $(document).ready(function(){
     $('.main-item-nav > a').bind('click', function(event){
          BALTIC.ToolsController.showMenu(event.currentTarget);
     });
+    
+    $('.menu-right > a').bind('click', function(event){
+    	$(event.currentTarget).fadeOut(200);
+    	$(event.currentTarget).next().fadeIn(200);    	
+    });
 
 
     $(document).bind('click', function(event){
         if($('.main-item-nav').find($(event.target)).length == 0){
             BALTIC.ToolsController.hideMenu();
 
+        }
+        
+        if($('.menu-right').find($(event.target)).length == 0){
+        	$('.menu-right > a').fadeIn(200);
+    	    $('.menu-right > a').next().fadeOut(200);
         }
     });
 
@@ -50,6 +60,7 @@ $(document).ready(function(){
 
     $('.col-icon .link-icon').bind('click', function(event){
          if($(event.currentTarget).attr('panel')){
+             var group = $(event.target).parent().parent().parent().attr('href');
              var classVis = $(event.currentTarget).attr('panel');
               $('.nav-icons').fadeOut(200, function(){
                   $('.'+classVis).fadeIn(200);

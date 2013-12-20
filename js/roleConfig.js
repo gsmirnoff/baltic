@@ -9,9 +9,24 @@
 
 var RoleConfig = {
     roles:{
-        role1:['solodBaltic', 'solodYear', 'syropYear', 'glassYear', 'glassFactory', 'glassNov'],
-        role2:['solodNov', 'syropYear', 'glassBaltic', 'solodYear'],
-        role3:['solodBaltic', 'solodYear', 'solodNov', 'syropYear']
+        role1:{
+            solod:['solodBaltic', 'solodNov'],
+            syrop:['syropYear'],
+            extract:['extractLossBaltic', 'extractLossNov'],
+            hfm:['glassBaltic', 'potBaltic', 'glassNov']
+        },
+        role2:{
+            solod:['solodNov', 'solodYear'],
+            syrop:['syropYear'],
+            extract:['extractLossNov', 'extractLossYear'],
+            hfm:['glassYear', 'potYear', 'glassFactory', 'glassNov']
+        },
+        role3:{
+            solod:['solodYear'],
+            syrop:['syropYear'],
+            extract:['extractLossYear'],
+            hfm:['glassYear', 'potYear', 'glassFactory']
+        }
     }
 
 }
