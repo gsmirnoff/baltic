@@ -326,3 +326,15 @@ nav .alerts .badge {
 .pnl-kpi{
     display: block !important;
 }
+
+.header-text a{
+    color:#fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pnl-content a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

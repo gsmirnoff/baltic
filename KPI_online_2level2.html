@@ -17,14 +17,64 @@
 
     <!-- nav-main -->
     <nav class="nav-main">
-        <ul>
-            <li>
+        <ul class="ul-sup">
+            <li class="main-item-nav">
                 <a href="javascript:;"><i class="icon icon-menu"></i><span class="badge">2</span></a>
+                <ul class="ul-sub visible">
+                    <li>
+                        <span class="alerts">
+                            <a href="javascript:;" class="btn btn-icon"><i class="icon icon-calendar"></i><span class="badge">2</span></a>
+                            <a href="javascript:;" class="btn btn-icon"><i class="icon icon-project"></i></a>
+                            <a href="javascript:;" class="btn btn-icon"><i class="icon icon-kpi"></i></a>
+                            <a href="javascript:;" class="btn btn-icon"><i class="icon icon-person"></i></a>
+                            <a href="javascript:;" class="btn btn-icon"><i class="icon icon-news"></i></a>
+                            <a href="javascript:;" class="btn btn-icon"><i class="icon icon-special"></i></a>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="btn btn-icon btn-block"><i class="icon icon-large icon-about"></i><span class="btn-text">О компании</span></a>
+                    </li>
+                    <li>
+                        <a href="KPI_online_1level.html" class="btn btn-icon btn-block"><i class="icon icon-large icon-kpi"></i><span class="btn-text">KPI</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="btn btn-icon btn-block"><i class="icon icon-large icon-knowledge"></i><span class="btn-text">Наши знания</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="btn btn-icon btn-block"><i class="icon icon-large icon-forum"></i><span class="btn-text">Форум</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="btn btn-icon btn-block"><i class="icon icon-large icon-docs"></i><span class="btn-text">Документооборот</span></a>
+                    </li>
+                </ul>
             </li>
-            <li>
+            <li class="main-item-nav">
                 <a href="javascript:;"><i class="icon icon-search"></i></a>
+                <span class="block-sub visible">
+                    <span class="block-inner">
+                        <span class="block-header">
+                            <span class="search">
+                                <input type="text" placeholder="Введите запрос" />
+                            </span>
+                        </span>
+                        <span class="block-content">
+                            <h3>Последние запросы</h3>
+                            <ul>
+                                <li><a href="javascript:;">ТЗ</a></li>
+                                <li><a href="javascript:;">Заявление на отпуск</a></li>
+                                <li><a href="javascript:;">Шаблон</a></li>
+                                <li><a href="javascript:;">Новому сотруднику</a></li>
+                                <li><a href="javascript:;">Отдел кадров</a></li>
+                                <li><a href="javascript:;">Ивакин Алексей</a></li>
+                            </ul>
+                        </span>
+                        <span class="block-bottom">
+                            <a href="javascript:;">Карта сайта</a>
+                        </span>
+                    </span>
+                </span>
             </li>
-            <li>
+            <li class="main-item-nav">
                 <a href="javascript:;"><i class="icon icon-help"></i></a>
             </li>
         </ul>
@@ -33,22 +83,25 @@
 
     <!-- nav-main -->
     <nav class="nav-action">
-        <ul>
+        <ul class="ul-sup">
             <li>
                 <a href="javascript:;"><i class="icon icon-external"></i></a>
+            </li>
+            <li>
+                <a href="javascript:;"><i class="icon icon-blocks"></i></a>
             </li>
         </ul>
     </nav>
     <!-- /nav-main -->
 
     <!-- work-area -->
-    <main class="area area-work">
+    <main class="area-work">
         <div class="area-inner">
             <div class="area-content">
 
                 <div class="carousel">
 
-                    <a href="javascfript:;" class="carousel-prev">&lt;</a>
+                    <a href="javascfript:;" class="carousel-prev"><i class="icon icon-carousel-prev"></i></a>
 
                     <div class="carousel-items">
                         <div class="pnl-container pnl-kpi">
@@ -64,7 +117,7 @@
 
 
 
-                                            <div class="col col-pin color-3 col-pinned">
+                                            <div class="col col-pin color-5 col-pinned">
                                                 <div class="col-inner">
 
                                                     <div class="col-header">
@@ -74,7 +127,7 @@
                                                     <div class="col-content">
                                                         <div class="grapholder">
                                                             <div class="grapholder-inner">
-                                                                <img src="img/placeholder_graph_1.png" alt="" />
+                                                                <img class="img" src="img/placeholder_graph_1.png" alt="" />
                                                                 <i class="grapholder-height"></i>
                                                             </div>
                                                         </div>
@@ -94,7 +147,7 @@
                                                     <div class="col-content">
                                                         <div class="grapholder">
                                                             <div class="grapholder-inner">
-                                                                <img src="img/placeholder_graph_1.png" alt="" />
+                                                                <img class="img" src="img/placeholder_graph_1.png" alt="" />
                                                                 <i class="grapholder-height"></i>
                                                             </div>
                                                         </div>
@@ -114,7 +167,7 @@
                                                     <div class="col-content">
                                                         <div class="grapholder">
                                                             <div class="grapholder-inner">
-                                                                <img src="img/placeholder_graph_1.png" alt="" />
+                                                                <img class="img" src="img/placeholder_graph_1.png" alt="" />
                                                                 <i class="grapholder-height"></i>
                                                             </div>
                                                         </div>
@@ -124,34 +177,65 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col col-pin color-1">
+                                            <div class="col col-pin">
                                                 <div class="col-inner">
 
                                                     <div class="col-header">
-                                                        <span class="header-text">Потери солода Тюмень ноябрь 2013</span>
+                                                        <span class="text-inner">Статистика потерь экстракта по стадиям Воронеж</span>
                                                     </div>
 
                                                     <div class="col-content">
                                                         <div class="grapholder">
                                                             <div class="grapholder-inner">
-                                                                <img src="img/placeholder_graph_1.png" alt="" />
+                                                                <img class="img" src="img/placeholder_graph_7.png" alt="" />
                                                                 <i class="grapholder-height"></i>
                                                             </div>
                                                         </div>
                                                     </div>
 
-                                                    <a href="javascript:;" class="pos-t-r"><i class="icon icon-close"></i></a>
+                                                    <a href="javascript:;" class="pos-b-r"><i class="icon icon-pin"></i></a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col col-pin col-pin-large color-1">
+                                                <div class="col-inner">
+
+                                                    <div class="col-header">
+                                                        <span class="text-inner">Статистика потерь экстракта по стадиям Балтика-Спб</span>
+                                                    </div>
+
+                                                    <div class="col-content">
+                                                        <div class="grapholder">
+                                                            <div class="grapholder-inner">
+                                                                <img class="img" src="img/placeholder_graph_8.png" alt="" />
+                                                                <i class="grapholder-height"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="javascript:;" class="pos-b-r"><i class="icon icon-pin"></i></a>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="row">
-                                            <div class="col col-1-3">
-                                                <div class="grapholder">
-                                                    <div class="grapholder-inner">
-                                                        <img src="img/placeholder_graph_2.png" alt="" />
-                                                        <i class="grapholder-height"></i>
+                                        <div class="cols">
+
+                                            <div class="col col-pin col-pin-xlarge">
+                                                <div class="col-inner">
+
+                                                    <div class="col-header">
+                                                        <span class="text-inner">Статистика потерь экстракта по стадиям Балтика-Спб</span>
                                                     </div>
+
+                                                    <div class="col-content">
+                                                        <div class="grapholder">
+                                                            <div class="grapholder-inner">
+                                                                <img class="img" src="img/placeholder_graph_9.png" alt="" />
+                                                                <i class="grapholder-height"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="javascript:;" class="pos-t-r"><i class="icon icon-close"></i></a>
+                                                    <a href="javascript:;" class="pos-t-r"><i class="icon icon-arrow-up"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -163,13 +247,13 @@
                             <div class="pnl pnl-maximized">
                             <div class="pnl-inner">
                                 <div class="pnl-header color-2">
-                                    <span class="header-text">Потери экстракта Балтика\Carlsberg</span>
+                                    <span class="text-inner">Потери экстракта Балтика\Carlsberg</span>
                                 </div>
                                 <div class="pnl-content">
 
                                     <div class="grapholder">
                                         <div class="grapholder-inner">
-                                            <img src="img/placeholder_graph_1.png" alt="" />
+                                            <img class="img" src="img/placeholder_graph_1.png" alt="" />
                                             <i class="grapholder-height"></i>
                                         </div>
                                     </div>
@@ -182,7 +266,7 @@
                     </div>
                     </div>
 
-                    <a class="carousel-next" href="javascript:;">&gt;</a>
+                    <a class="carousel-next" href="javascript:;"><i class="icon icon-carousel-next"></i></a>
 
                 </div>
             </div>
@@ -201,5 +285,8 @@
 <!-- /wrapper -->
 
 <script src="js/libs/jquery-1.10.2.min.js"></script>
+<script src="js/roleConfig.js"></script>
+<script src="js/starter.js"></script>
+<script src="js/tools/BalticTools.js"></script>
 </body>
 </html>
