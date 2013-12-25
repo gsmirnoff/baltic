@@ -7,16 +7,19 @@
 @import url("buttons.css");
 @import url("layout.css");
 @import url("charts.css");
+@import "index-styles.css" screen;
 
 
 body.landing {
-    background: #0084c4 url(../img/screens/landing.png) center no-repeat;
-    -ms-behavior: url(backgroundsize.min.htc);
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    background-size: 100% 100%;
-    background-attachment: fixed;
-    text-align: center;
+    /*background: #0084c4 url(../img/screens/landing.png) center no-repeat;*/
+    /*-ms-behavior: url(backgroundsize.min.htc);*/
+    /*-webkit-background-size: 100% 100%;*/
+    /*-moz-background-size: 100% 100%;*/
+    /*background-size: 100% 100%;*/
+    /*background-attachment: fixed;*/
+    /*text-align: center;*/
+    background-color: #0084c4;
+    background-image: none;
 }
 
 .landing .wrapper {

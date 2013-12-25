@@ -1,0 +1,49 @@
+.top-side h2 {
+    color: #ffffff;
+    font-family: 'carlsberg_sanslight';
+    font-weight: 600;
+    font-size: 115%;
+    margin-top: 59px;
+    margin-left: 38px;
+    margin-right: 25px;
+}
+
+.top-side {
+    position: relative;
+    z-index: 3;
+    height: 52%;
+}
+
+.bottom-side {
+    position: relative;
+    z-index: 3;
+    height: 17%;
+}
+
+
+.bottom-side > img {
+    float: right;
+    margin-right: 15px;
+}
+
+.bottom-side > * {
+    display: inline-block;
+}
+
+.bottom-side h2 {
+    color: #ffffff;
+    font-size: 17px;
+    vertical-align: top;
+    top: 4px;
+    position: relative;
+    margin-left: 10px;
+}
+
+.top-side > img {
+    margin-left: 150px;
+    margin-top: 37px;
+}
+
+/*.no-brand{*/
+    /*display: none;*/
+/*}*/

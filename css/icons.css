@@ -27,8 +27,8 @@
 /* badges */
 .badge {
     display: inline-block;
-    min-width: 10px;
-    padding: 3px 3px 4px;
+    min-width: 7px;
+    padding: 1px 4px 2px;
     font-size: 10px;
     line-height: 1em;
     font-weight: bold;
@@ -37,9 +37,9 @@
     white-space: nowrap;
     text-align: center;
     background-color: #df0024;
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    border-radius:10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }
 .badge:empty {
     display: none;
@@ -51,17 +51,20 @@
 }
 .icon-external {
     background-image:url(../img/icon_external.png);
-    background-position: 80% 0;
+    background-position: 80% -1;
 
 }
 .icon-search {
-     background-image:url(../img/icon_search.png);
+     background-image:url(../img/settings_sprite.PNG);
+    background-position: 40% 33%;
 }
 .icon-menu {
-    background-image:url(../img/icon_menu.png);
+     background-image:url(../img/settings_sprite.PNG);
+    background-position: 40% 0%;
 }
 .icon-help {
-    background-image:url(../img/icon_help.png);
+     background-image:url(../img/settings_sprite.PNG);
+    background-position: 40% 65%;
 }
 .icon-settings {
     background-image:url(../img/icon_settings.png);

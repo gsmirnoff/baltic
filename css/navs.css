@@ -48,8 +48,8 @@
 }
 /* icons on navs */
 nav .icon {
-    width:40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     line-height: 40px;
     font-size: 40px;
 }
@@ -68,10 +68,10 @@ nav a {
 }
 .nav-main .badge, .nav-action .badge {
     position: absolute;
-    width:auto;
+    width: auto;
     height: auto;
-    top: -5px;
-    right:-5px;
+    top: -8px;
+    right: -6px;
 }
 
 .ul-sub, .block-sub {
